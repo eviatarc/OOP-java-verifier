@@ -1,0 +1,81 @@
+eviatarc
+avishavtal
+
+
+=============================
+=      File description     =
+=============================
+
+_____________________________
+main package files
+_____________________________
+
+Sjavac.java -  a class that runs the program - recieve input and communicate with other classes
+Parser.java - a class that creates a parser that reades the lines and gi ves information about each
+one also fillets each line and analyze it
+SMethod.java - a class that represent a method class and also might be used as scoop
+ object like a loop of a condition but first of all it works as a class of methods than a condition
+ for example is a private case of a method
+SVariable.java - a class that represent Svariabeles objects inside the program
+
+______________________________________________________________________________
+Sexcepsion package files - differenet kinds of exception under abstreact class
+_______________________________________________________________________________
+
+SExceptionsTypeOne.java - the abstract class of all types one exceptions
+
+CalledToUnfamilierMethod.java
+CannotRecognizeValidLine.java
+InvalidAssignmentException.java
+InvalidConditionArguments.java
+InvalidMethodDaclaration.java
+InvalidNameAlreadyTaken.java
+InvalidNameRecognizeException.java
+InvalidTypeException.java
+InvalidValueAssinmentException.java
+MethodCallWithInvalidParameters.java
+MethodInsideMethodException.java
+NoReturnStatementAtEndOfMethod.java
+TooMuchCloseScopeSignsException.java
+
+=============================
+=          Design           =
+=============================
+
+we had few ideas for designs - so at the begginig we design tow different programs and needed
+to decide on the best of them, we were not suprising when realize that implementation even a good
+design isnt easy - so we had to improve our best design during meeting different implementation
+problems.
+
+we decided to use the factory principle in few different places, whenever is needed to use one to a
+differnet subject.
+we use a lot the strategy design pattern for the different types of lines that each time a type
+ line recognzed the way to cut it into a splitted line that we can work with was different.
+
+ some non-trivial desicions we had is that if at the beggining we thought to make multy kinds of
+ variable eventually we decided that it is not neccesery and might make more problems during the
+ implementation, so we decided to do one class that is represent all the variables types, that the
+ type is just another data member of each variable, to do so we needed to adjust some String =
+ patterns and then we had the option two work with difficult assignment without dealing with a maze
+ of classes.
+
+ the Sjava is the class that runs the program when the second most interesting and complex
+ class is the parser (a parser object) which is a very detailed reader of lines that provide alot
+ of detailes start at the question do there any relevant line to read and continue to what kind of
+ line left, to the question is this line is valid syntax, and if so to deal with is meaning, also
+ an un-trivial desicion was to make it multu pourpose so this class (or an object) have many
+ different functions that works as different tools for different parts of the program.
+ also we implement a variable factory as a factory design pattern in the Svariable class that is
+ very usefull also to create a variable and also to determiinate what kind of value or type its
+ have, we use in many places in the program the strategy desogn pattern becuase we realize that for
+ each turn in the program we have so many chouces to dill with since even the pattern of the lines
+ is kind of familier still thier content mught apear in many variations and kinds.
+
+=============================
+=  Implementation details   =
+=============================
+eventually as i mentiond above in the design detailes we implement very similar to our design but
+ still because of implemetaton issues we had to change our micro design , to add functions that we
+ didnt imagine we will have to but in the same time realize that some naive function that we wrote
+ on the paper are irrelevant.
+
